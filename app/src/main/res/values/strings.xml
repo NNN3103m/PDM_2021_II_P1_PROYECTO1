@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">PDM_2021_II_P1_PROYECTO1</string>
+
+    //menu principal
+
+    <string name="ingresar_libros">Ingresar Libros</string>
+    <string name="ingresar_alumnos">Ingresar Alumnos</string>
+    <string name="ingresar_prestamo_de_libros">Ingresar Prestamo de Libros</string>
+    <string name="libros_por_numeros_de_libro">Libros por Numero de Libro</string>
+    <string name="libros_por_numero_de_cuenta">Libros por Numero de Cuenta</string>
+    <string name="prestamos_por_numeros_de_libro">Prestamos por Numero de Libro</string>
+
+
+</resources>
