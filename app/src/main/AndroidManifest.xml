@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PDM_2021_II_P1_PROYECTO1">
-        <activity android:name=".VisualizarPrestamosLibrosNumeroCuentaActivity"></activity>
+        <activity android:name=".FinalizadoActivity"></activity>
+        <activity android:name=".VisualizarPrestamosLibrosNumeroCuentaActivity" />
         <activity android:name=".VisualizarAlumnosNumeroCuentaActivity" />
         <activity android:name=".VisualizarLibrosNumeroLibroActivity" />
         <activity android:name=".IngresarPrestamoLibroActivity" />
