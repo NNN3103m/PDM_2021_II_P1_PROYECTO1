@@ -13,6 +13,18 @@
     //acciones
     <string name="aceptar">Aceptar</string>
     <string name="atras">Atras</string>
+    <string name="nombre_del_alumno">Nombre del Alumno</string>
+    <string name="numero_de_cuenta">Numero de Cuenta</string>
+    <string name="name">Name</string>
+    <string name="carrera">Carrera</string>
+    <string name="correo">Correo</string>
+    <string name="fecha_de_ingreso">Fecha de Ingreso</string>
+    <string name="autor">Autor</string>
+    <string name="fecha_de_publicacion">Fecha de Publicacion</string>
+    <string name="nombre_del_libro">Nombre del Libro</string>
+    <string name="editorial">Editorial</string>
+    <string name="numero_de_libro">Numero de Libro</string>
+
 
 
 </resources>
