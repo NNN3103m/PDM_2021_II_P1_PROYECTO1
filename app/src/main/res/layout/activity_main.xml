@@ -18,15 +18,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnVisualizarLibroNumero"
+        android:id="@+id/btnIngresarAlumnos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="@string/libros_por_numeros_de_libro"
+        android:text="@string/ingresar_alumnos"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnPrestamoLibro" />
+        app:layout_constraintTop_toBottomOf="@+id/btnIngresarLibros" />
 
     <Button
         android:id="@+id/btnPrestamoLibro"
@@ -37,6 +37,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnIngresarAlumnos" />
+
+    <Button
+        android:id="@+id/btnVisualizarLibroNumero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/libros_por_numeros_de_libro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPrestamoLibro" />
 
     <Button
         android:id="@+id/btnVisualizarLibroCuenta"
@@ -59,16 +70,5 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnVisualizarLibroCuenta" />
-
-    <Button
-        android:id="@+id/btnIngresarAlumnos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="@string/ingresar_alumnos"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnIngresarLibros" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

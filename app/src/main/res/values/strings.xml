@@ -10,5 +10,9 @@
     <string name="libros_por_numero_de_cuenta">Libros por Numero de Cuenta</string>
     <string name="prestamos_por_numeros_de_libro">Prestamos por Numero de Libro</string>
 
+    //acciones
+    <string name="aceptar">Aceptar</string>
+    <string name="atras">Atras</string>
+
 
 </resources>
