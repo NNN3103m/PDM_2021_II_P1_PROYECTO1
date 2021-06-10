@@ -1,7 +1,10 @@
 package hn.edu.ujcv.pdm_2021_ii_p1_proyecto1
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_ingresar_alumnos.*
 import kotlinx.android.synthetic.main.activity_ingresar_libros.*
 
 
@@ -9,8 +12,23 @@ class IngresarLibrosActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ingresar_libros)
-
         //Botones de atras y aceptar
         btnAtrasIL.setOnClickListener{onBackPressed()}
+        btnAceptarIL.setOnClickListener{comprobarVacios()}
+    }
+
+    fun comprobarVacios(){
+        when{
+            txtNumeroLibro.text.isEmpty()  -> Toast.makeText(this,"Debe ingresar su numero de libro", Toast.LENGTH_SHORT).show()
+            txtNombreLibro.text.isEmpty()  -> Toast.makeText(this,"Debe ingresar su nombre del libro", Toast.LENGTH_SHORT).show()
+            txtAutor.text.isEmpty()       -> Toast.makeText(this,"Debe ingresar el autor del libro", Toast.LENGTH_SHORT).show()
+            txtFechaPublicacion.text.isEmpty()  -> Toast.makeText(this,"Debe ingresar la fecha de publicacion del libro", Toast.LENGTH_SHORT).show()
+            txtEditorial.text.isEmpty()        -> Toast.makeText(this,"Debe ingresar la editorial del libro", Toast.LENGTH_SHORT).show()
+            else -> {
+                val intent = Intent(this, FinalizadoActivity::class.java)
+                //ntent.putExtra("nombre",txtNombreAlumno.text.toString())
+                startActivity(intent)
+            }
+        }
     }
 }
