@@ -24,6 +24,9 @@
     <string name="nombre_del_libro">Nombre del Libro</string>
     <string name="editorial">Editorial</string>
     <string name="numero_de_libro">Numero de Libro</string>
+    <string name="buscar">Buscar</string>
+    <string name="resultado">Resultado</string>
+    <string name="cuenta">#Cuenta</string>
 
 
 </resources>
