@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.preference.PreferenceManager
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
@@ -12,37 +13,29 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_ingresar_alumnos.*
 import kotlinx.android.synthetic.main.activity_ingresar_alumnos.view.*
+import kotlinx.android.synthetic.main.activity_ingresar_libros.*
 import kotlinx.android.synthetic.main.activity_visualizar_prestamos_libros_numero_cuenta.*
+import java.lang.StringBuilder
 import java.util.regex.Matcher
 import java.util.regex.Pattern
 
 
 class IngresarAlumnosActivity : AppCompatActivity() {
+    var valoresAlumnos: HashMap<Int, String> = hashMapOf()
+    var numero = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ingresar_alumnos)
 
-        //Data input
-        val studentAcc = findViewById<EditText>(R.id.txtNumeroCuenta)
-        val studentName = findViewById<EditText>(R.id.txtNombreAlumno)
-        val studentCareer = findViewById<EditText>(R.id.txtCarrera)
-        val studentDateEntry = findViewById<EditText>(R.id.txtFechaIngreso)
-        val studentMail = findViewById<EditText>(R.id.txtCorreo)
-        val saveBtnStudent = findViewById<Button>(R.id.btnAceptarIA)
-
-
         //Btn Handler
-//        saveBtnStudent.setOnClickListener(
-//            var account = studentAcc.text.toString()
-//        )
-
-        //Btn Func
         btnAtrasIA.setOnClickListener{onBackPressed()}
-        btnAceptarIA.setOnClickListener{comprobarVacios()}
+        btnAceptarIA.setOnClickListener{
+            comprobarVacios()
+            saveAlum()
 
+            Log.i("data", "data is : $valoresAlumnos")
+        }
 
-        //Start Activity
-//        val intent
 
         txtCorreo.addTextChangedListener(object: TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
@@ -60,6 +53,19 @@ class IngresarAlumnosActivity : AppCompatActivity() {
 
 
     }
+
+    private fun saveAlum(){
+        val datoAlumnos = StringBuilder()
+        numero+=1
+        datoAlumnos.append(txtNumeroCuenta.text.toString().trim()).append("|")
+        datoAlumnos.append(txtNombreAlumno.text.toString().trim()).append("|")
+        datoAlumnos.append(txtCarrera.text.toString().trim()).append("|")
+        datoAlumnos.append(txtFechaIngreso.text.toString().trim()).append("|")
+        datoAlumnos.append(txtCorreo.text.toString().trim()).append("|")
+
+        valoresAlumnos.put(numero,datoAlumnos.toString())
+    }
+
     fun comprobarVacios(){
         when{
             txtNumeroCuenta.text.isEmpty()  -> Toast.makeText(this,"Debe ingresar su numero de cuenta", Toast.LENGTH_SHORT).show()
@@ -68,7 +74,7 @@ class IngresarAlumnosActivity : AppCompatActivity() {
             txtFechaIngreso.text.isEmpty()  -> Toast.makeText(this,"Debe ingresar la fecha", Toast.LENGTH_SHORT).show()
             txtCorreo.text.isEmpty()        -> Toast.makeText(this,"Debe ingresar su correo", Toast.LENGTH_SHORT).show()
             else -> {
-                val intent = Intent(this, FinalizadoActivity::class.java)
+                val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
             }
         }
