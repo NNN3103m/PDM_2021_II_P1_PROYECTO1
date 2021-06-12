@@ -44,6 +44,7 @@
 
     <EditText
         android:id="@+id/txtNumeroLibro"
+        android:hint="Ingrese el número de libro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -70,6 +71,7 @@
 
     <EditText
         android:id="@+id/txtNombreLibro"
+        android:hint="Ingrese el nombre del libro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -95,6 +97,7 @@
 
     <EditText
         android:id="@+id/txtAutor"
+        android:hint="Ingrese el nombre del autor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -120,6 +123,7 @@
 
     <EditText
         android:id="@+id/txtFechaPublicacion"
+        android:hint="Ingrese la fecha de publicación"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -145,6 +149,7 @@
 
     <EditText
         android:id="@+id/txtEditorial"
+        android:hint="Ingrese el nombre de la editorial"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
