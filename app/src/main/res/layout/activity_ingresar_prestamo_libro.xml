@@ -48,17 +48,17 @@
 
     <EditText
         android:id="@+id/txtFechaPrestamo"
-        android:hint="Ingrese la fecha de préstamo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="Ingrese la fecha de préstamo"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.267" />
+        app:layout_constraintVertical_bias="0.258" />
 
     <TextView
         android:id="@+id/txvFechaDevolucion"
@@ -84,7 +84,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.784" />
+        app:layout_constraintVertical_bias="0.775" />
 
     <TextView
         android:id="@+id/txvNumeroCuentaAPrestar"
@@ -100,17 +100,17 @@
 
     <EditText
         android:id="@+id/txtNumeroCuentaAPrestar"
-        android:hint="Ingrese el número de cuénta del alumno a otorgar préstamo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="Ingrese el número de cuénta del alumno a otorgar préstamo"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.433" />
+        app:layout_constraintVertical_bias="0.424" />
 
     <TextView
         android:id="@+id/txvNumeroLibroAPrestar"
@@ -124,20 +124,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.53" />
 
+
     <EditText
         android:id="@+id/txtNumeroLibroAPrestar"
-        android:hint="Ingrese el número de libro a prestar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="Ingrese el número de libro a prestar"
+        android:importantForAutofill="no"
         android:inputType="date"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.613"
-        android:importantForAutofill="no" />
-
+        app:layout_constraintVertical_bias="0.597" />
 
     <Button
         android:id="@+id/btnAtrasIPL"
@@ -154,7 +154,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="64dp"
-        android:text="@string/aceptar"
+        android:text="Guardar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnAtrasIPL" />

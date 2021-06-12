@@ -9,9 +9,11 @@ class VisualizarPrestamosLibrosNumeroCuentaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_visualizar_prestamos_libros_numero_cuenta)
-        //Botones de atras y aceptar
+
+        //        Btn Handler
         btnAtrasVPLNC.setOnClickListener{onBackPressed()}
     }
+
     fun mostrarPrestamoLibrosNumeroCuenta(view: View){
 
     }

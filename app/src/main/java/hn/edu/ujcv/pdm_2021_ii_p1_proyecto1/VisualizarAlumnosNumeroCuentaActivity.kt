@@ -10,7 +10,8 @@ class VisualizarAlumnosNumeroCuentaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_visualizar_alumnos_numero_cuenta)
-        //Botones de atras y aceptar
+
+        //        Btn Handler
         btnAtrasVANC.setOnClickListener{onBackPressed()}
     }
 
