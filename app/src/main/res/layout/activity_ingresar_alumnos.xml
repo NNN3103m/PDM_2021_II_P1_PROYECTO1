@@ -20,6 +20,7 @@
 
     <EditText
         android:id="@+id/txtNumeroCuenta"
+        android:hint="Ingrese el número de cuenta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -48,6 +49,7 @@
 
     <EditText
         android:id="@+id/txtNombreAlumno"
+        android:hint="Ingrese el nombre del alumno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -74,6 +76,7 @@
 
     <EditText
         android:id="@+id/txtCarrera"
+        android:hint="Ingrese el nombre de la carrera"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -87,6 +90,7 @@
 
     <EditText
         android:id="@+id/txtFechaIngreso"
+        android:hint="Ingrese la Fecha de Ingreso del alumno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -96,10 +100,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.637"
+        android:focusable="false"
+        android:clickable="true"
         android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/txtCorreo"
+        android:hint="Ingrese el correo institucional del alumno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"

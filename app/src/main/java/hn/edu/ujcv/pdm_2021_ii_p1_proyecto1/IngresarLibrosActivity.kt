@@ -3,6 +3,8 @@ package hn.edu.ujcv.pdm_2021_ii_p1_proyecto1
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_ingresar_alumnos.*
 import kotlinx.android.synthetic.main.activity_ingresar_libros.*
@@ -12,7 +14,15 @@ class IngresarLibrosActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ingresar_libros)
-        //Botones de atras y aceptar
+
+        //Data input
+        val bookNumber = findViewById<EditText>(R.id.txtNumeroLibro)
+        val bookName = findViewById<EditText>(R.id.txtNombreLibro)
+        val author = findViewById<EditText>(R.id.txtAutor)
+        val publishDate = findViewById<EditText>(R.id.txtFechaPublicacion)
+        val editorialName = findViewById<EditText>(R.id.txtEditorial)
+
+        //Btn Handler
         btnAtrasIL.setOnClickListener{onBackPressed()}
         btnAceptarIL.setOnClickListener{comprobarVacios()}
     }

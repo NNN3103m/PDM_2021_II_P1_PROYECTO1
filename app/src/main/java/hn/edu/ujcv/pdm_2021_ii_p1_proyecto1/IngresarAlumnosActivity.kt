@@ -2,9 +2,12 @@ package hn.edu.ujcv.pdm_2021_ii_p1_proyecto1
 
 import android.content.Intent
 import android.os.Bundle
+import android.preference.PreferenceManager
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Patterns
+import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_ingresar_alumnos.*
@@ -18,9 +21,28 @@ class IngresarAlumnosActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ingresar_alumnos)
-        //Botones de atras y aceptar
+
+        //Data input
+        val studentAcc = findViewById<EditText>(R.id.txtNumeroCuenta)
+        val studentName = findViewById<EditText>(R.id.txtNombreAlumno)
+        val studentCareer = findViewById<EditText>(R.id.txtCarrera)
+        val studentDateEntry = findViewById<EditText>(R.id.txtFechaIngreso)
+        val studentMail = findViewById<EditText>(R.id.txtCorreo)
+        val saveBtnStudent = findViewById<Button>(R.id.btnAceptarIA)
+
+
+        //Btn Handler
+//        saveBtnStudent.setOnClickListener(
+//            var account = studentAcc.text.toString()
+//        )
+
+        //Btn Func
         btnAtrasIA.setOnClickListener{onBackPressed()}
         btnAceptarIA.setOnClickListener{comprobarVacios()}
+
+
+        //Start Activity
+//        val intent
 
         txtCorreo.addTextChangedListener(object: TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
