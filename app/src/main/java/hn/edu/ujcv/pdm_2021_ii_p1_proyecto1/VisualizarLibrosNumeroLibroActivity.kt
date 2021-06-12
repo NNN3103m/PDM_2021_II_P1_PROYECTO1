@@ -11,6 +11,12 @@ class VisualizarLibrosNumeroLibroActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_visualizar_libros_numero_libro)
 
+        supportActionBar?.apply {
+            title = "Búsqueda de Libro"
+            setDisplayShowHomeEnabled(true)
+            setDisplayUseLogoEnabled(true)
+        }
+
         //        Btn Handler
         btnAtrasVLNL.setOnClickListener{onBackPressed()}
     }

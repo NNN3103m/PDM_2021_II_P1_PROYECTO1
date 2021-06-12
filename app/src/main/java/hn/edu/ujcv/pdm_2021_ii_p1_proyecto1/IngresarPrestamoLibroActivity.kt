@@ -22,6 +22,12 @@ class IngresarPrestamoLibroActivity : AppCompatActivity() {
 //        initialize()
         setContentView(R.layout.activity_ingresar_prestamo_libro)
 
+        supportActionBar?.apply {
+            title = "Registro de Préstamo"
+            setDisplayShowHomeEnabled(true)
+            setDisplayUseLogoEnabled(true)
+        }
+
         //Btn Handler
         btnAtrasIPL.setOnClickListener{onBackPressed()}
         btnAceptarIPL.setOnClickListener{

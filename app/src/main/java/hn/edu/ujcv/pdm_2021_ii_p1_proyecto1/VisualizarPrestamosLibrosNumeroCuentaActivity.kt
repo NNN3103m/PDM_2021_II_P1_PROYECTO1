@@ -10,6 +10,12 @@ class VisualizarPrestamosLibrosNumeroCuentaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_visualizar_prestamos_libros_numero_cuenta)
 
+        supportActionBar?.apply {
+            title = "Búsqueda de Préstamo"
+            setDisplayShowHomeEnabled(true)
+            setDisplayUseLogoEnabled(true)
+        }
+
         //        Btn Handler
         btnAtrasVPLNC.setOnClickListener{onBackPressed()}
     }

@@ -11,6 +11,12 @@ class VisualizarAlumnosNumeroCuentaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_visualizar_alumnos_numero_cuenta)
 
+        supportActionBar?.apply {
+            title = "Búsqueda de Alumno"
+            setDisplayShowHomeEnabled(true)
+            setDisplayUseLogoEnabled(true)
+        }
+
         //        Btn Handler
         btnAtrasVANC.setOnClickListener{onBackPressed()}
     }

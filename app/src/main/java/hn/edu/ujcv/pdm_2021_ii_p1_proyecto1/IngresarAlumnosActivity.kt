@@ -27,6 +27,12 @@ class IngresarAlumnosActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ingresar_alumnos)
 
+        supportActionBar?.apply {
+            title = "Registro de Alumno"
+            setDisplayShowHomeEnabled(true)
+            setDisplayUseLogoEnabled(true)
+        }
+
         //Btn Handler
         btnAtrasIA.setOnClickListener{onBackPressed()}
         btnAceptarIA.setOnClickListener{
@@ -35,6 +41,7 @@ class IngresarAlumnosActivity : AppCompatActivity() {
 
             Log.i("data", "data is : $valoresAlumnos")
         }
+
 
 
         txtCorreo.addTextChangedListener(object: TextWatcher {
@@ -64,6 +71,7 @@ class IngresarAlumnosActivity : AppCompatActivity() {
         valoresAlumnos.put(numero,datoAlumnos.toString())
     }
 
+
     fun comprobarVacios(){
         when{
             txtNumeroCuenta.text.isEmpty()  -> Toast.makeText(this,"Debe ingresar su numero de cuenta", Toast.LENGTH_SHORT).show()
@@ -71,6 +79,7 @@ class IngresarAlumnosActivity : AppCompatActivity() {
             txtCarrera.text.isEmpty()       -> Toast.makeText(this,"Debe ingresar la carrera que esta cursando", Toast.LENGTH_SHORT).show()
             txtFechaIngreso.text.isEmpty()  -> Toast.makeText(this,"Debe ingresar la fecha", Toast.LENGTH_SHORT).show()
             txtCorreo.text.isEmpty()        -> Toast.makeText(this,"Debe ingresar su correo", Toast.LENGTH_SHORT).show()
+
             else -> {
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)

@@ -20,6 +20,12 @@ class IngresarLibrosActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ingresar_libros)
 
+        supportActionBar?.apply {
+            title = "Registro de Libro"
+            setDisplayShowHomeEnabled(true)
+            setDisplayUseLogoEnabled(true)
+        }
+
         //Btn Handler
         btnAtrasIL.setOnClickListener{onBackPressed()}
         btnAceptarIL.setOnClickListener{
