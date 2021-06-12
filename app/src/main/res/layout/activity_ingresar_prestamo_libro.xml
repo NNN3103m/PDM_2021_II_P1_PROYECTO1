@@ -132,7 +132,7 @@
         android:ems="10"
         android:hint="Ingrese el número de libro a prestar"
         android:importantForAutofill="no"
-        android:inputType="date"
+        android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
