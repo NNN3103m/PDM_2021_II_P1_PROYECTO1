@@ -38,17 +38,15 @@ class IngresarAlumnosActivity : AppCompatActivity() {
 
 
         txtCorreo.addTextChangedListener(object: TextWatcher {
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-            }
-
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+            override fun afterTextChanged(s: Editable?) {}
             override fun onTextChanged(p0: CharSequence?, p1:Int, p2:Int, p3: Int){
                 if (android.util.Patterns.EMAIL_ADDRESS.matcher(txtCorreo.text.toString()).matches())
                 else {
                     txtCorreo.setError("Email Invalido")
                 }
             }
-            override fun afterTextChanged(s: Editable?) {
-            }
+
         })
 
 

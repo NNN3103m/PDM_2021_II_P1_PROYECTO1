@@ -10,6 +10,14 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        supportActionBar?.apply {
+            title = "App para Biblioteca"
+            setDisplayShowHomeEnabled(true)
+            setDisplayUseLogoEnabled(true)
+        }
+
+
         btnIngresarAlumnos.setOnClickListener{ingresarAlumnos()}
         btnIngresarLibros.setOnClickListener{ingresarLibros()}
         btnPrestamoLibro.setOnClickListener{ingresarPrestamoLibro()}
